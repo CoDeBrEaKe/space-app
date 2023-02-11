@@ -40,7 +40,7 @@ const Destination = () => {
         <TransitionGroup component={planet[0].toLocaleLowerCase()}>
             <CSSTransition timeout={1500}
               classNames="animation">
-              <img src={selectedPlanetData.images.png}/>
+              <img src={require(`${selectedPlanetData.images.png}`)}/>
           </CSSTransition>
           </TransitionGroup>
     </div>
