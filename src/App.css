@@ -1,0 +1,528 @@
+:root{
+  --main-dark:#0B0d17;
+  --main-cian:#D0D6f9;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.home{
+  background-image: url("./assets/home/background-home-desktop.jpg");
+}
+.crew{
+  background-image: url("./assets/crew/background-crew-desktop.jpg");
+}
+.technology{
+  background-image: url("./assets/technology/background-technology-desktop.jpg");
+}
+.destinations{
+  background-image: url("./assets/destination/background-destination-desktop.jpg");
+}
+@media (max-width:520px) {
+  .home{
+    background-image: url("./assets/home/background-home-mobile.jpg");
+  }
+  .crew{
+    background-image: url("./assets/crew/background-crew-mobile.jpg");
+  }
+  .technology{
+    background-image: url("./assets/technology/background-technology-mobile.jpg");
+  }
+  .destinations{
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+  }
+}
+@media (max-width:920px) {
+  .home{
+    background-image: url("./assets/home/background-home-tablet.jpg");
+  }
+  .crew{
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+  }
+  .technology{
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+  }
+  .destinations{
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+body{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Bellefair', serif;
+}
+header{
+  padding: 30px;
+  
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul{
+  list-style-type:none;
+  display: flex;
+  width: 100%;
+  /* height: 60px; */
+  background-color: transparent;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  justify-content: space-around;
+  z-index: 0;
+  transition: all 3s;
+
+}
+header img{
+  padding-right: 50px;
+  cursor: pointer;
+}
+header ul li{
+  padding: 25px 15px;
+  font-size: 16px;
+  margin-left: 50px;
+  color: white;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-weight: lighter;
+  transition: all 1s ;
+  border-bottom:1px solid transparent ;
+}
+header ul li.active {
+  border-bottom: 1px solid rgb(207, 207, 207);
+  transition: all 1s ;
+}
+header ul li:hover{
+  transition: all 1s;
+  border-bottom: 1px solid white;
+}
+span{
+  display: inline;
+  margin-right: 10px;
+  font-family: 'Barlow Condensed';
+  font-weight: 700;
+}
+hr{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.365);
+  width: 1000px;
+  border: none;
+  height: 0.2px;
+  z-index: 1000;
+}
+main{
+  padding: 15px;
+  padding-top: 100px;
+}
+main .intro{
+  color:white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+.intro div{
+  width: 50%;
+}
+.intro h5{
+  font-size: 28px;
+  font-weight: 100;
+}
+.intro h5 span{
+  display: block;
+  font-weight: 700;
+  font-size: 150px;
+  font-weight: 100;
+
+}
+.intro p {
+  font-size: 18px;
+  margin-top: 40px;
+}
+.intro > span{
+  background-color: white;
+  color: var(--main-dark);
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  letter-spacing: 5px;
+  font-family: 'bellefair';
+  font-size: 32px;
+  transition: all 0.7s;
+  cursor: pointer;
+  font-weight: 100;
+  outline: 0px solid #ffffff40;
+}
+.intro > span:hover{
+  width: 250px;
+  height: 250px;
+  outline: 50px solid #ffffff40; 
+  transform: translateX(-13.5px);
+  transform: translateY(-16.5px);
+}
+@media (max-width: 992px){
+  main .intro{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  main .intro span{
+    margin-top: 70px;
+  }
+  header ul{
+    display:flex;
+  }
+}
+@media (max-width:580px) {
+  .intro h5 span{
+    font-size: 105px;
+  }  
+    header ul{
+      position:absolute;
+      overflow: hidden;
+      display: none;
+      flex-direction:column;
+      height:1000px;
+      justify-content:flex-end;
+      align-items:center;
+      opacity:0;
+      margin-right:50px;
+      padding:0;
+      transition: all 0.3s;
+    }
+    header ul li{
+      height:4%;
+    }
+    img.small:first-of-type{
+      display: block;
+      transition: all 0.4s;
+    }
+    img.small:last-of-type{
+      display: none;
+      z-index:10;
+      transition: all 0.4s;
+    }
+    img.small.active{
+      display: block;
+      opacity: 1;
+    }
+}
+@media (min-width:580px)
+{
+  img.small{
+    display:none
+  }
+}
+.destination {
+  /* display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: flex-start; */
+  color:white;
+}
+.destination h2{
+  margin-bottom: 40px;
+  margin-left: 50px;
+}
+.destination h2 span{
+  color:#ffffff34;
+}
+.destination .view{
+  padding: 0 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px;
+}
+.view ul {
+  list-style:none;
+  display: flex;
+  justify-content:flex-start;
+  /* margin-bottom: 30px; */
+}
+.view ul li{
+  margin-right: 20px;
+  margin-top: auto;
+  font-size: 16px;
+  color: var(--main-cian);
+  cursor: pointer;
+  padding: 20px 0;
+  transition: all 0.5s;
+  border-bottom: 1px solid transparent;
+  
+}
+.view ul li.active{
+  color:white;
+  border-bottom: 2px solid white;
+}
+.view ul li:hover{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.484);
+}
+.view .planets {
+  overflow: hidden;
+  width: 32%;
+}
+.planets .data h1{
+  font-size: 100px;
+  text-transform:uppercase;
+  font-weight: 100;
+  margin-top: auto;
+}
+
+@media (max-width:992px){
+  .destination {
+    text-align:center
+  }
+  .destination .view{
+    flex-direction:column-reverse;
+  }
+  .view .planets ul{
+    justify-content: center;
+  }
+  .view img{
+    width: 100%;
+  }
+  .view .planets{
+    width:100%;
+  }
+  .view .planets .data h1{
+    font-size: 70px;
+  }
+  .data .travel-details {
+    
+    flex-direction:column;
+  }
+  .data .travel-details .kelometer{
+    margin-bottom:20px
+  }
+  
+}
+.data p{
+  font-size: 18px;
+  color: var(--main-cian);
+}
+.data hr{
+  margin: 20px 0;
+}
+.data .travel-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.data .travel-details h3{
+  font-weight: 100;
+  font-size: 14px;
+  color: var(--main-cian);
+}
+.data .travel-details h4{
+  font-weight: 100;
+  font-size: 28px;
+  
+}
+
+.crew-section{
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap:40px
+}
+.crew-section .crew-details{
+  color:white;
+  width: 50%;
+}
+.crew-section .crew-details h2,
+.tech-section .tech-details h2{
+  font-size: 28px;
+  font-weight: 100;
+  margin-bottom: 120px;
+}
+.crew-section .crew-details h2 span,
+.tech-section .tech-details h2 span{
+  color:rgba(255, 255, 255, 0.523);
+}
+.crew-section .crew-details h3:first-of-type{
+  font-weight: 100;
+  color:rgba(255, 255, 255, 0.523);
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+.crew-section .crew-details h3:last-of-type{
+  font-size: 56px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.crew-section .crew-details p{
+  font-size: 18px;
+  color:var(--main-cian);
+  letter-spacing: 1px;
+}
+.crew-details ul {
+  list-style: none;
+  margin-top: 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.crew-details ul li{
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.409);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.crew-details ul li.active{
+  background-color: rgb(255, 255, 255);
+}
+.crew-details ul li:hover{
+  background-color: rgb(255, 255, 255);
+}
+.crew-section  img {
+  width: 80%;
+}
+@media (max-width:992px) {
+  .crew-section {
+    flex-direction:column-reverse;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .crew-section img {
+    width:100%;
+  }
+  .crew-details ul{
+    justify-content: center;
+    order: 0;
+  }
+  .crew-section .crew-details h3:last-of-type{
+    font-size: 30px;
+    order: 1;
+  }
+  .crew-section .crew-details p{
+    font-size: 16px;
+  }
+}
+.tech-section{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.tech-details {
+  padding: 70px;
+}
+.tech-details h2{
+  color:white
+}
+.horizontal{
+  display: flex;
+  flex-direction: row-reverse;
+  gap:30px
+}
+.tech-details ul{
+  gap:30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+.tech-details ul li{
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.tech-details p{
+  font-size: 16px;
+  color:var(--main-cian);
+  margin-bottom: 17px;
+}
+.tech-details h3:first-of-type{
+  font-size: 56px;
+  color:white;
+  margin-bottom: 17px;
+  font-weight: 100;
+}
+.tech-details h3:last-of-type{
+  color: var(--main-cian);
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 100;
+}
+.tech-details ul li.active{
+  background-color: white;
+  color:var(--main-dark);
+  
+}
+.tech-details ul li:hover{
+  border: 1px solid white;
+
+}
+@media (max-width:992px) {
+  .tech-section{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .tech-section img{
+    width: 100%;
+  }
+  .tech-section .horizontal{
+    flex-direction: column-reverse;
+  }
+  .tech-section .horizontal ul{
+    flex-direction: row;
+}}
+/* Animation and smooth loading */
+.transition-enter {
+  opacity: 0.01;
+  transform: translate(0, -10px);
+}
+.transition-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1500ms ease-in;
+}
+.transition-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.transition-exit-active {
+  opacity: 0.01;
+  transform: translate(0, 10px);
+  transition: all 1500ms ease-in;
+}
+
+.animation-enter {
+  opacity: 0.01;
+  transform: translate(-80px,0);
+}
+.animation-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 500ms ease-in;
+}
+.animation-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.animation-exit-active {
+  opacity: 0.01;
+  transform: translate(80px, 0);
+  transition: all 500ms ease-in;
+}
