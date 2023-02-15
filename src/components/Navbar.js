@@ -2,7 +2,8 @@ import React from 'react'
 import  ReactDOM  from 'react-dom/client'
 import data from './../data/data.json'
 import { useState } from 'react';
-
+import icon from './../assets/shared/icon-hamburger.svg'
+import close from './../assets/shared/icon-close.svg'
 import Logo from './../assets/shared/logo.svg'
 
 const Navbar = ({page , setPage}) => {
@@ -27,8 +28,8 @@ for (let key in data ) {
             <li onClick={()=>{setPage('home')}} key='home' className={page == 'home'? 'active':''} ><span>00</span>HOME</li>
             {navigations}
         </ul>
-        <img className="small "  src='./../assets/shared/icon-hamburger.svg' alt='burger'/>
-        <img className="small" src='./../assets/shared/icon-close.svg' alt='close'/>
+        <img className="small "  src={icon} alt='burger'/>
+        <img className="small" src={close} alt='close'/>
     </header>
   )
 }
